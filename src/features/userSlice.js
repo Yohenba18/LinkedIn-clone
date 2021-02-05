@@ -3,23 +3,22 @@ import { createSlice } from '@reduxjs/toolkit';
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    value: 0,
+    user: null,
   },
   reducers: {
-    increment: state => {
-      state.value += 1;
+    login: (state, action) => {
+      state.user = action.payload;
     },
-    decrement: state => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    
+    logout: (state) => {
+      state.user =  null;
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = userSlice.actions;
+export const { login,logout } = userSlice.actions;
 
+//selectors it allows us to select the user from the redux, or say to extract th user from the redux 
 export const selectUser = state => state.counter.user;
 
 export default userSlice.reducer;
