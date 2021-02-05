@@ -1,8 +1,43 @@
 .widgets{
     position: sticky;
     flex: 0.2;
+    top: 80 px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    height: fit-content;
+    padding-bottom: 10px;
 }
 
 .widgets__header{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.widgets__header> h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.widgets__aritcle{
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.widgets__aritcle:hover{
+    background-color: whitesmoke;
+}
+
+.widgets__aritcleLeft{
+    color: #0177b7;
+    margin-right: 10px;
+
+}
+
+.widgets__aritcleLeft > .MuiSvgIcon-root{
+    font-size: 15px ;
 }
